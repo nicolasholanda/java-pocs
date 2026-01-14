@@ -4,6 +4,9 @@ public class ReflectionDemo {
     static void main() throws Exception {
         System.out.println("--- Read class metadata ---");
         ReflectionRead.execute();
+
+        System.out.println("\n--- Invoke methods and constructors ---");
+        ReflectionInvoke.execute();
     }
 }
 
