@@ -13,6 +13,9 @@ public class ReflectionDemo {
 
         System.out.println("\n--- Working with arrays ---");
         ReflectionArrays.execute();
+
+        System.out.println("\n--- Working with generics ---");
+        ReflectionGenerics.execute();
     }
 }
 
