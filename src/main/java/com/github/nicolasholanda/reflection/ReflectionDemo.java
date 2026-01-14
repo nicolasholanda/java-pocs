@@ -7,6 +7,9 @@ public class ReflectionDemo {
 
         System.out.println("\n--- Invoke methods and constructors ---");
         ReflectionInvoke.execute();
+
+        System.out.println("\n--- Modify field values ---");
+        ReflectionModify.execute();
     }
 }
 
