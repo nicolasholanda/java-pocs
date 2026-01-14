@@ -29,6 +29,19 @@ public class FunctionalBasics {
         Supplier<Double> randomSupplier = () -> Math.random();
         System.out.println("Random value: " + randomSupplier.get());
 
+
+
+        System.out.println("- Method references:");
+        Function<String, Integer> lengthRef = String::length;
+        System.out.println("Length of word Java: " + lengthRef.apply("Java"));
+
+
+        Consumer<String> printlnRef = System.out::println;
+        printlnRef.accept("Using method reference");
+
+
+        Supplier<String> newString = String::new;
+        System.out.println("New string: '" + newString.get() + "'");
     }
 }
 
