@@ -7,6 +7,9 @@ public class PropertiesDemo {
 
         System.out.println("--- Read Properties from file ---");
         PropertiesReader.execute();
+
+        System.out.println("--- System Properties ---");
+        PropertiesSystem.execute();
     }
 }
 
