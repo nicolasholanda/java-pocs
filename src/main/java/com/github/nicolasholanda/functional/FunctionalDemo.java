@@ -7,5 +7,8 @@ public class FunctionalDemo {
 
         System.out.println("\n--- Custom functional interfaces ---");
         FunctionalCustom.execute();
+
+        System.out.println("--- Method references ---");
+        FunctionalMethodRef.execute();
     }
 }
