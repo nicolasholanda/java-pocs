@@ -10,6 +10,10 @@ interface Validator<T> {
     boolean validate(T value);
 }
 
+@FunctionalInterface
+interface Processor {
+    void process(String data);
+}
 
 public class FunctionalCustom {
     static void execute() {
@@ -22,6 +26,9 @@ public class FunctionalCustom {
         Validator<Integer> positive = n -> n > 0;
         System.out.println("Valid string: " + notEmpty.validate("hello"));
         System.out.println("Valid number: " + positive.validate(10));
+
+        Processor logger = data -> System.out.println("Processing: " + data);
+        logger.process("important data");
     }
 }
 
