@@ -1,6 +1,7 @@
 package com.github.nicolasholanda.streams;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -31,6 +32,12 @@ public class StreamsCollectors {
             .map(p -> p.category)
             .collect(Collectors.toSet());
         System.out.println(categories);
+
+        System.out.println("GroupingBy category:");
+        Map<String, List<Product>> byCategory = products.stream()
+            .collect(Collectors.groupingBy(p -> p.category));
+        byCategory.forEach((cat, prods) ->
+            System.out.println(cat + ": " + prods.size() + " items"));
     }
 }
 
