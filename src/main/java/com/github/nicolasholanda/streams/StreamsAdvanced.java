@@ -33,6 +33,13 @@ public class StreamsAdvanced {
         numbers.stream()
             .distinct()
             .forEach(System.out::println);
+
+        System.out.println("sorted:");
+        Stream.of("banana", "apple", "cherry", "date")
+            .sorted()
+            .forEach(System.out::println);
+
+
     }
 }
 
