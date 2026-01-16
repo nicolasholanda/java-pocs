@@ -45,6 +45,12 @@ public class StreamsCollectors {
             .collect(Collectors.joining(", "));
         System.out.println(names);
 
+        System.out.println("PartitioningBy price > 500:");
+        Map<Boolean, List<Product>> partitioned = products.stream()
+            .collect(Collectors.partitioningBy(p -> p.price > 500));
+        System.out.println("Expensive: " + partitioned.get(true).size());
+        System.out.println("Cheap: " + partitioned.get(false).size());
+
     }
 }
 
