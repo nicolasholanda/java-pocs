@@ -9,5 +9,8 @@ public class StreamsDemo {
 
         System.out.println("--- Stream collectors ---");
         StreamsCollectors.execute();
+
+        System.out.println("--- Advanced streams ---");
+        StreamsAdvanced.execute();
     }
 }
