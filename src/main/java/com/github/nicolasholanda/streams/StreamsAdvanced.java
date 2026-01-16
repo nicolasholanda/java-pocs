@@ -39,7 +39,19 @@ public class StreamsAdvanced {
             .sorted()
             .forEach(System.out::println);
 
+        System.out.println("limit and skip:");
+        Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+            .skip(3)
+            .limit(4)
+            .forEach(System.out::println);
 
+        System.out.println("peek:");
+        int sum = Stream.of(1, 2, 3, 4, 5)
+            .peek(n -> System.out.println("Processing: " + n))
+            .map(n -> n * 2)
+            .peek(n -> System.out.println("After map: " + n))
+            .reduce(0, Integer::sum);
+        System.out.println("Sum: " + sum);
     }
 }
 
