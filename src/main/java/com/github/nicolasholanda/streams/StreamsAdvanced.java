@@ -27,6 +27,12 @@ public class StreamsAdvanced {
         orders.stream()
             .flatMap(order -> order.items.stream())
             .forEach(System.out::println);
+
+        System.out.println("distinct:");
+        List<Integer> numbers = Arrays.asList(1, 2, 2, 3, 3, 3, 4, 5, 5);
+        numbers.stream()
+            .distinct()
+            .forEach(System.out::println);
     }
 }
 
