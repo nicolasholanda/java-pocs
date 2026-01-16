@@ -38,6 +38,13 @@ public class StreamsCollectors {
             .collect(Collectors.groupingBy(p -> p.category));
         byCategory.forEach((cat, prods) ->
             System.out.println(cat + ": " + prods.size() + " items"));
+
+        System.out.println("Joining names:");
+        String names = products.stream()
+            .map(p -> p.name)
+            .collect(Collectors.joining(", "));
+        System.out.println(names);
+
     }
 }
 
