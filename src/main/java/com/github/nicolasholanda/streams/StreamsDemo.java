@@ -6,5 +6,8 @@ public class StreamsDemo {
 
         System.out.println("--- Stream basics ---");
         StreamsBasics.execute();
+
+        System.out.println("--- Stream collectors ---");
+        StreamsCollectors.execute();
     }
 }
