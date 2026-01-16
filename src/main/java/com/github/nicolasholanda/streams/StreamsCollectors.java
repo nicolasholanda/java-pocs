@@ -51,6 +51,12 @@ public class StreamsCollectors {
         System.out.println("Expensive: " + partitioned.get(true).size());
         System.out.println("Cheap: " + partitioned.get(false).size());
 
+
+
+        System.out.println("Counting by category:");
+        Map<String, Long> counts = products.stream()
+            .collect(Collectors.groupingBy(p -> p.category, Collectors.counting()));
+        System.out.println(counts);
     }
 }
 
