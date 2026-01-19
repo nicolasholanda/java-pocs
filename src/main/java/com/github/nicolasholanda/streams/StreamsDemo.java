@@ -18,5 +18,8 @@ public class StreamsDemo {
 
         System.out.println("\n--- Stream creation ---");
         StreamsCreation.execute();
+
+        System.out.println("\n--- Terminal operations ---");
+        StreamsTerminal.execute();
     }
 }
