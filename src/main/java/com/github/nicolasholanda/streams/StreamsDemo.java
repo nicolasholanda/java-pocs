@@ -12,5 +12,8 @@ public class StreamsDemo {
 
         System.out.println("--- Advanced streams ---");
         StreamsAdvanced.execute();
+
+        System.out.println("--- Parallel streams ---");
+        StreamsParallel.execute();
     }
 }
