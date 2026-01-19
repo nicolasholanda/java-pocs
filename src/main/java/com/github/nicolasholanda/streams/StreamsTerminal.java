@@ -28,6 +28,18 @@ public class StreamsTerminal {
         System.out.println("findAny:");
         Optional<Integer> any = numbers.parallelStream().filter(n -> n > 5).findAny();
         any.ifPresent(System.out::println);
+
+        System.out.println("count:");
+        long count = numbers.stream().filter(n -> n > 5).count();
+        System.out.println(count);
+
+        System.out.println("min:");
+        Optional<Integer> min = numbers.stream().min(Comparator.naturalOrder());
+        min.ifPresent(System.out::println);
+
+        System.out.println("max:");
+        Optional<Integer> max = numbers.stream().max(Comparator.naturalOrder());
+        max.ifPresent(System.out::println);
     }
 }
 
