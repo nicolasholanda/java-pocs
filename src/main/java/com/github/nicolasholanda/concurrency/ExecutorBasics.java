@@ -29,6 +29,16 @@ public class ExecutorBasics {
                 cached.submit(() -> System.out.println("Task " + taskId + " on " + Thread.currentThread().getName()));
             }
         }
+
+
+
+        System.out.println("Single thread executor:");
+        try (ExecutorService single = Executors.newSingleThreadExecutor()) {
+            for (int i = 1; i <= 3; i++) {
+                int taskId = i;
+                single.submit(() -> System.out.println("Task " + taskId + " on " + Thread.currentThread().getName()));
+            }
+        }
     }
 }
 
