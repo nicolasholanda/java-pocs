@@ -1,6 +1,8 @@
 package com.github.nicolasholanda.streams;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 public class StreamsTerminal {
     static void execute() {
@@ -17,6 +19,15 @@ public class StreamsTerminal {
         System.out.println("noneMatch (none negative):");
         boolean noneNegative = numbers.stream().noneMatch(n -> n < 0);
         System.out.println(noneNegative);
+
+
+        System.out.println("findFirst:");
+        Optional<Integer> first = numbers.stream().filter(n -> n > 5).findFirst();
+        first.ifPresent(System.out::println);
+
+        System.out.println("findAny:");
+        Optional<Integer> any = numbers.parallelStream().filter(n -> n > 5).findAny();
+        any.ifPresent(System.out::println);
     }
 }
 
