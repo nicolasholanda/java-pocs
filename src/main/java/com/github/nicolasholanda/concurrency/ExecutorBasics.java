@@ -20,6 +20,15 @@ public class ExecutorBasics {
                 });
             }
         }
+
+
+        System.out.println("Cached thread pool:");
+        try (ExecutorService cached = Executors.newCachedThreadPool()) {
+            for (int i = 1; i <= 3; i++) {
+                int taskId = i;
+                cached.submit(() -> System.out.println("Task " + taskId + " on " + Thread.currentThread().getName()));
+            }
+        }
     }
 }
 
