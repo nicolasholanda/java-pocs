@@ -13,7 +13,10 @@ public class StreamsDemo {
         System.out.println("--- Advanced streams ---");
         StreamsAdvanced.execute();
 
-        System.out.println("--- Parallel streams ---");
+        System.out.println("\n--- Parallel streams ---");
         StreamsParallel.execute();
+
+        System.out.println("\n--- Stream creation ---");
+        StreamsCreation.execute();
     }
 }
