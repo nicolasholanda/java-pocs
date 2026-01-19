@@ -23,6 +23,25 @@ public class StreamsCreation {
         Stream.generate(() -> "Hello")
             .limit(3)
             .forEach(System.out::println);
+
+
+
+        System.out.println("IntStream.range():");
+        IntStream.range(1, 5)
+            .forEach(System.out::println);
+
+
+
+        System.out.println("IntStream.rangeClosed():");
+        IntStream.rangeClosed(1, 5)
+            .forEach(System.out::println);
+
+
+
+        System.out.println("Arrays.stream():");
+        int[] numbers = {10, 20, 30, 40, 50};
+        Arrays.stream(numbers)
+            .forEach(System.out::println);
     }
 }
 
