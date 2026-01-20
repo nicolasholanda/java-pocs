@@ -6,6 +6,9 @@ public class ConcurrencyDemo {
 
         System.out.println("--- Executor basics ---");
         ExecutorBasics.execute();
+
+        System.out.println("--- Callable and Future ---");
+        ExecutorCallable.execute();
     }
 }
 
