@@ -9,6 +9,9 @@ public class ConcurrencyDemo {
 
         System.out.println("--- Callable and Future ---");
         ExecutorCallable.execute();
+
+        System.out.println("--- Scheduled executor ---");
+        ExecutorScheduled.execute();
     }
 }
 
