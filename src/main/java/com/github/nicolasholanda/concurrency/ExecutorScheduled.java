@@ -27,6 +27,20 @@ public class ExecutorScheduled {
             Thread.sleep(3500);
         }
 
+        System.out.println("scheduleWithFixedDelay:");
+        try (ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1)) {
+            scheduler.scheduleWithFixedDelay(
+                    () -> {
+                        System.out.println("Fixed delay task at " + System.currentTimeMillis());
+                        try { Thread.sleep(500); } catch (InterruptedException _) { }
+                    },
+                    0,
+                    1,
+                    TimeUnit.SECONDS
+            );
+            Thread.sleep(3500);
+        }
+
     }
 }
 
