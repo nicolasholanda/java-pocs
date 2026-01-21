@@ -12,6 +12,9 @@ public class ConcurrencyDemo {
 
         System.out.println("--- Scheduled executor ---");
         ExecutorScheduled.execute();
+
+        System.out.println("--- Locks ---");
+        ConcurrencyLocks.execute();
     }
 }
 
