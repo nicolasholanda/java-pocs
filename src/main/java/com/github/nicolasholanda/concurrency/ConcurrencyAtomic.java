@@ -36,6 +36,22 @@ public class ConcurrencyAtomic {
         sum.addAndGet(100);
         sum.addAndGet(200);
         System.out.println("Sum: " + sum.get());
+
+        System.out.println("AtomicBoolean:");
+        AtomicBoolean flag = new AtomicBoolean(false);
+        System.out.println("Initial: " + flag.get());
+        flag.set(true);
+        System.out.println("After set: " + flag.get());
+        boolean previous = flag.getAndSet(false);
+        System.out.println("Previous: " + previous + ", Current: " + flag.get());
+
+        System.out.println("AtomicReference:");
+        AtomicReference<String> ref = new AtomicReference<>("initial");
+        System.out.println("Value: " + ref.get());
+        ref.set("updated");
+        System.out.println("Value: " + ref.get());
+        ref.compareAndSet("updated", "final");
+        System.out.println("Value: " + ref.get());
     }
 }
 
