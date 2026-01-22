@@ -6,6 +6,9 @@ public class AnnotationsDemo {
 
         System.out.println("--- Annotation basics ---");
         AnnotationBasics.execute();
+
+        System.out.println("--- Annotation usage ---");
+        AnnotationUsage.execute();
     }
 }
 
