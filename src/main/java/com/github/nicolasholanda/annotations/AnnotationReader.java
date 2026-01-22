@@ -1,5 +1,7 @@
 package com.github.nicolasholanda.annotations;
 
+import java.lang.reflect.Field;
+
 public class AnnotationReader {
 
     static void execute() {
@@ -13,6 +15,14 @@ public class AnnotationReader {
         if (userClass.isAnnotationPresent(Deprecated.class)) {
             Deprecated deprecated = userClass.getAnnotation(Deprecated.class);
             System.out.println("Deprecated - Reason: " + deprecated.reason() + ", Since: " + deprecated.since());
+        }
+
+        System.out.println("Reading field annotations:");
+        for (Field field : userClass.getDeclaredFields()) {
+            if (field.isAnnotationPresent(Column.class)) {
+                Column column = field.getAnnotation(Column.class);
+                System.out.println("Field: " + field.getName() + ", Column: " + column.name() + ", Nullable: " + column.nullable());
+            }
         }
     }
 }
