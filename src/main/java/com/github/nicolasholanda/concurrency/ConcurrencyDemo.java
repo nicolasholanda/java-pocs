@@ -15,6 +15,9 @@ public class ConcurrencyDemo {
 
         System.out.println("--- Locks ---");
         ConcurrencyLocks.execute();
+
+        System.out.println("--- Atomic variables ---");
+        ConcurrencyAtomic.execute();
     }
 }
 
