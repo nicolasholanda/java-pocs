@@ -30,6 +30,12 @@ public class ConcurrencyAtomic {
         System.out.println("Updated: " + updated + ", Value: " + value.get());
         updated = value.compareAndSet(10, 30);
         System.out.println("Updated: " + updated + ", Value: " + value.get());
+
+        System.out.println("AtomicLong:");
+        AtomicLong sum = new AtomicLong(0);
+        sum.addAndGet(100);
+        sum.addAndGet(200);
+        System.out.println("Sum: " + sum.get());
     }
 }
 
