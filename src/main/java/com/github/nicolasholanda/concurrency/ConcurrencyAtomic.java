@@ -23,6 +23,13 @@ public class ConcurrencyAtomic {
         t1.join();
         t2.join();
         System.out.println("Counter: " + counter.get());
+
+        System.out.println("AtomicInteger compareAndSet:");
+        AtomicInteger value = new AtomicInteger(10);
+        boolean updated = value.compareAndSet(10, 20);
+        System.out.println("Updated: " + updated + ", Value: " + value.get());
+        updated = value.compareAndSet(10, 30);
+        System.out.println("Updated: " + updated + ", Value: " + value.get());
     }
 }
 
