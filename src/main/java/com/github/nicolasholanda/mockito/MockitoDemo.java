@@ -6,6 +6,9 @@ public class MockitoDemo {
 
         System.out.println("--- Mockito basics ---");
         MockitoBasics.execute();
+
+        System.out.println("--- Argument matchers ---");
+        MockitoArguments.execute();
     }
 }
 
