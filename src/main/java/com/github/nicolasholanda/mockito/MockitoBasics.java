@@ -46,9 +46,6 @@ public class MockitoBasics {
 
         User user = new User(1L, "John");
         when(mockRepo.findById(1L)).thenReturn(user);
-        User result = mockRepo.findById(1L);
-        System.out.println("Found user: " + result.name);
-
 
         UserService service = new UserService(mockRepo);
         service.getUser(1L);
