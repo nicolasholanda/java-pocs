@@ -20,6 +20,19 @@ public class MockitoArguments {
         when(mockRepo.findById(eq(5L))).thenReturn(new User(5L, "Alice"));
         User result3 = mockRepo.findById(5L);
         System.out.println("Found with eq(5L): " + result3.name);
+
+
+
+        when(mockRepo.findById(argThat(id -> id > 100))).thenReturn(new User(999L, "Premium User"));
+        User result4 = mockRepo.findById(150L);
+        System.out.println("Found with id > 100: " + result4.name);
+
+
+
+        doNothing().when(mockRepo).save(any(User.class));
+        mockRepo.save(user);
+        verify(mockRepo).save(any(User.class));
+        System.out.println("Verified save with any matcher");
     }
 }
 
