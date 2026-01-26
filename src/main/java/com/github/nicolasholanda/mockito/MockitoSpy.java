@@ -32,6 +32,13 @@ public class MockitoSpy {
 
         List<User> users = spyService.getUsers();
         System.out.println("Real method called, got " + users.size() + " users");
+
+        System.out.println("Stub spy method:");
+        when(spyService.findUser(999L)).thenReturn(new User(999L, "Stubbed User"));
+        User stubbedUser = spyService.findUser(999L);
+        User realUser = spyService.findUser(1L);
+        System.out.println("Stubbed: " + stubbedUser.name);
+        System.out.println("Real: " + realUser.name);
     }
 }
 
