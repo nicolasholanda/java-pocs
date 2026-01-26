@@ -12,6 +12,9 @@ public class MockitoDemo {
 
         System.out.println("--- Verify ---");
         MockitoVerify.execute();
+
+        System.out.println("--- Spy ---");
+        MockitoSpy.execute();
     }
 }
 
