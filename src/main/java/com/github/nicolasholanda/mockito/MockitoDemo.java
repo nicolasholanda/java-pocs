@@ -9,6 +9,9 @@ public class MockitoDemo {
 
         System.out.println("--- Argument matchers ---");
         MockitoArguments.execute();
+
+        System.out.println("--- Verify ---");
+        MockitoVerify.execute();
     }
 }
 
