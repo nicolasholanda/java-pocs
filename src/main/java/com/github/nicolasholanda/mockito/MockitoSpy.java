@@ -39,6 +39,16 @@ public class MockitoSpy {
         User realUser = spyService.findUser(1L);
         System.out.println("Stubbed: " + stubbedUser.name);
         System.out.println("Real: " + realUser.name);
+
+        System.out.println("Verify spy:");
+        spyService.saveUser(new User(3L, "Test"));
+        verify(spyService).saveUser(any(User.class));
+        System.out.println("Verified spy method call");
+
+        System.out.println("Spy with doReturn:");
+        doReturn(new User(888L, "DoReturn User")).when(spyService).findUser(888L);
+        User doReturnUser = spyService.findUser(888L);
+        System.out.println("DoReturn: " + doReturnUser.name);
     }
 }
 
