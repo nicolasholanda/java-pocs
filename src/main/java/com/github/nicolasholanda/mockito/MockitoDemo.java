@@ -15,6 +15,9 @@ public class MockitoDemo {
 
         System.out.println("--- Spy ---");
         MockitoSpy.execute();
+
+        System.out.println("--- Annotations ---");
+        MockitoAnnotations.execute();
     }
 }
 
