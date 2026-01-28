@@ -18,6 +18,9 @@ public class MockitoDemo {
 
         System.out.println("--- Annotations ---");
         MockitoAnnotations.execute();
+
+        System.out.println("--- Advanced ---");
+        MockitoAdvanced.execute();
     }
 }
 
