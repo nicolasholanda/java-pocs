@@ -18,6 +18,9 @@ public class JunitDemo {
 
         System.out.println("--- JUnit Lifecycle ---");
         runTests(JunitLifecycle.class);
+
+        System.out.println("--- JUnit Annotations ---");
+        runTests(JunitAnnotations.class);
     }
 
     static void runTests(Class<?> testClass) {
