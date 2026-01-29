@@ -6,6 +6,9 @@ import org.junit.jupiter.params.provider.*;
 
 import java.util.stream.Stream;
 
+enum Status {
+    ACTIVE, INACTIVE, PENDING
+}
 
 public class JunitParameterized {
 
@@ -46,6 +49,37 @@ public class JunitParameterized {
         Assertions.assertTrue(age > 0);
     }
 
+    @ParameterizedTest
+    @MethodSource("provideNumbers")
+    void testMethodSource(int number) {
+        System.out.println("Testing with number from method: " + number);
+        Assertions.assertTrue(number % 2 == 0);
+    }
 
+    static Stream<Integer> provideNumbers() {
+        return Stream.of(2, 4, 6, 8, 10);
+    }
+
+    @ParameterizedTest
+    @EnumSource(Status.class)
+    void testEnumSource(Status status) {
+        System.out.println("Testing with status: " + status);
+        Assertions.assertNotNull(status);
+    }
+
+    @ParameterizedTest
+    @EnumSource(value = Status.class, names = {"ACTIVE", "INACTIVE"})
+    void testEnumSourceFiltered(Status status) {
+        System.out.println("Testing status: " + status);
+        Assertions.assertTrue(status == Status.ACTIVE || status == Status.INACTIVE);
+    }
+
+    @ParameterizedTest
+    @NullAndEmptySource
+    @ValueSource(strings = {"  ", "\t", "\n"})
+    void testNullAndEmpty(String input) {
+        System.out.println("Testing with blank inputt: [" + input + "]");
+        Assertions.assertTrue(input == null || input.trim().isEmpty());
+    }
 }
 
