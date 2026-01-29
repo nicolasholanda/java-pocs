@@ -21,6 +21,9 @@ public class JunitDemo {
 
         System.out.println("--- JUnit Annotations ---");
         runTests(JunitAnnotations.class);
+
+        System.out.println("--- JUnit Parameterized ---");
+        runTests(JunitParameterized.class);
     }
 
     static void runTests(Class<?> testClass) {
