@@ -22,5 +22,30 @@ public class JunitParameterized {
         System.out.println("Testing with fruit: " + fruit);
         Assertions.assertNotNull(fruit);
     }
+
+    @ParameterizedTest
+    @CsvSource({
+        "1, 2, 3",
+        "5, 5, 10",
+        "10, 20, 30"
+    })
+    void testCsvSource(int a, int b, int sum) {
+        System.out.println(a + " + " + b + " = " + sum);
+        Assertions.assertEquals(sum, a + b);
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "John, 25",
+        "Alice, 30",
+        "Bob, 35"
+    })
+    void testCsvSourceStrings(String name, int age) {
+        System.out.println(name + " is " + age + " years old");
+        Assertions.assertNotNull(name);
+        Assertions.assertTrue(age > 0);
+    }
+
+
 }
 
