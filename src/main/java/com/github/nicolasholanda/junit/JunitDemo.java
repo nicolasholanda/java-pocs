@@ -27,6 +27,15 @@ public class JunitDemo {
 
         System.out.println("--- JUnit Nested ---");
         runTests(JunitNested.class);
+
+        System.out.println("--- JUnit Conditional ---");
+        runTests(JunitConditional.class);
+
+        System.out.println("--- JUnit Timeout ---");
+        runTests(JunitTimeout.class);
+
+        System.out.println("--- JUnit Assumptions ---");
+        runTests(JunitAssumptions.class);
     }
 
     static void runTests(Class<?> testClass) {
