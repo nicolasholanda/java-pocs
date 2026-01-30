@@ -24,6 +24,9 @@ public class JunitDemo {
 
         System.out.println("--- JUnit Parameterized ---");
         runTests(JunitParameterized.class);
+
+        System.out.println("--- JUnit Nested ---");
+        runTests(JunitNested.class);
     }
 
     static void runTests(Class<?> testClass) {
