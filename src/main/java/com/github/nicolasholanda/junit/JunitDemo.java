@@ -36,6 +36,9 @@ public class JunitDemo {
 
         System.out.println("--- JUnit Assumptions ---");
         runTests(JunitAssumptions.class);
+
+        System.out.println("--- JUnit Exceptions ---");
+        runTests(JunitExceptions.class);
     }
 
     static void runTests(Class<?> testClass) {
