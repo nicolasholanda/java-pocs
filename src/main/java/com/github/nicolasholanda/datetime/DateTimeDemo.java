@@ -11,6 +11,9 @@ public class DateTimeDemo {
 
         System.out.println("--- Date Time manipulation ---");
         DateTimeManipulation.execute();
+
+        System.out.println("--- Zoned Date Time ---");
+        DateTimeZoned.execute();
     }
 }
 
