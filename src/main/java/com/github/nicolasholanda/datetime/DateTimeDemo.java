@@ -8,6 +8,9 @@ public class DateTimeDemo {
 
         System.out.println("--- Date Time formatting ---");
         DateTimeFormatting.execute();
+
+        System.out.println("--- Date Time manipulation ---");
+        DateTimeManipulation.execute();
     }
 }
 
