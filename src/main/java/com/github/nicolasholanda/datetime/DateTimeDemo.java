@@ -5,6 +5,9 @@ public class DateTimeDemo {
     static void main() {
         System.out.println("--- Date Time basics ---");
         DateTimeBasics.execute();
+
+        System.out.println("--- Date Time formatting ---");
+        DateTimeFormatting.execute();
     }
 }
 
