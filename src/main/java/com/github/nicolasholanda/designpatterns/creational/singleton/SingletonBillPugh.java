@@ -1,4 +1,4 @@
-package com.github.nicolasholanda.designpatterns.singleton;
+package com.github.nicolasholanda.designpatterns.creational.singleton;
 
 public class SingletonBillPugh {
 
