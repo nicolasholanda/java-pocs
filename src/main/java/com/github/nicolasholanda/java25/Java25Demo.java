@@ -8,5 +8,7 @@ public class Java25Demo {
         FlexibleConstructors.execute();
         System.out.println();
         StreamGatherers.execute();
+        System.out.println();
+        ModuleImports.execute();
     }
 }
