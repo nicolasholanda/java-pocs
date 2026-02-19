@@ -10,5 +10,7 @@ public class Java25Demo {
         StreamGatherers.execute();
         System.out.println();
         ModuleImports.execute();
+        System.out.println();
+        ScopedValuesDemo.execute();
     }
 }
