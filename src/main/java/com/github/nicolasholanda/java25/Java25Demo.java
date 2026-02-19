@@ -12,5 +12,7 @@ public class Java25Demo {
         ModuleImports.execute();
         System.out.println();
         ScopedValuesDemo.execute();
+        System.out.println();
+        ClassFileApiDemo.execute();
     }
 }
