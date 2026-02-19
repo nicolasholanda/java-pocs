@@ -6,5 +6,7 @@ public class Java25Demo {
         PrimitivePatterns.execute();
         System.out.println();
         FlexibleConstructors.execute();
+        System.out.println();
+        StreamGatherers.execute();
     }
 }
