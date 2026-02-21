@@ -14,5 +14,7 @@ public class Java25Demo {
         ScopedValuesDemo.execute();
         System.out.println();
         ClassFileApiDemo.execute();
+        System.out.println();
+        StructuredConcurrencyDemo.execute();
     }
 }
