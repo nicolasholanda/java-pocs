@@ -8,5 +8,7 @@ public class SpringDemo {
         BeanScopesDemo.execute();
         System.out.println();
         DependencyInjectionDemo.execute();
+        System.out.println();
+        BeanPostProcessorDemo.execute();
     }
 }
