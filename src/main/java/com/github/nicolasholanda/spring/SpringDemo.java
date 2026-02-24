@@ -14,5 +14,7 @@ public class SpringDemo {
         ValueAnnotationDemo.execute();
         System.out.println();
         SpringBootDemo.execute();
+        System.out.println();
+        RestSupportDemo.execute();
     }
 }
