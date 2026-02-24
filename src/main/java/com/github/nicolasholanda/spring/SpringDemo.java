@@ -12,5 +12,7 @@ public class SpringDemo {
         BeanPostProcessorDemo.execute();
         System.out.println();
         ValueAnnotationDemo.execute();
+        System.out.println();
+        SpringBootDemo.execute();
     }
 }
