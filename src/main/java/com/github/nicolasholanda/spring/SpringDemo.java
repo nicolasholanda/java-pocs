@@ -16,5 +16,7 @@ public class SpringDemo {
         SpringBootDemo.execute();
         System.out.println();
         RestSupportDemo.execute();
+        System.out.println();
+        RestTemplateDemo.execute();
     }
 }
