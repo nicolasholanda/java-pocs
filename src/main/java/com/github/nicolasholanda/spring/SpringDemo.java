@@ -10,5 +10,7 @@ public class SpringDemo {
         DependencyInjectionDemo.execute();
         System.out.println();
         BeanPostProcessorDemo.execute();
+        System.out.println();
+        ValueAnnotationDemo.execute();
     }
 }
