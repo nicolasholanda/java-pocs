@@ -22,5 +22,7 @@ public class SpringDemo {
         SpringTestingDemo.execute();
         System.out.println();
         RestIntegrationTestDemo.execute();
+        System.out.println();
+        SpringDataJdbcDemo.execute();
     }
 }
