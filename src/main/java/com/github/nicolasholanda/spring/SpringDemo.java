@@ -20,5 +20,7 @@ public class SpringDemo {
         RestTemplateDemo.execute();
         System.out.println();
         SpringTestingDemo.execute();
+        System.out.println();
+        RestIntegrationTestDemo.execute();
     }
 }
