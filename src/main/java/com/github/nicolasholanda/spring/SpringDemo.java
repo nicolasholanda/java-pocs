@@ -26,5 +26,7 @@ public class SpringDemo {
         SpringDataJdbcDemo.execute();
         System.out.println();
         CaffeineCacheDemo.execute();
+        System.out.println();
+        TransactionManagementDemo.execute();
     }
 }
