@@ -28,5 +28,7 @@ public class SpringDemo {
         CaffeineCacheDemo.execute();
         System.out.println();
         TransactionManagementDemo.execute();
+        System.out.println();
+        CsrfProtectionDemo.execute();
     }
 }
