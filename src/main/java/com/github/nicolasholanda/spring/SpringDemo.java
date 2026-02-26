@@ -24,5 +24,7 @@ public class SpringDemo {
         RestIntegrationTestDemo.execute();
         System.out.println();
         SpringDataJdbcDemo.execute();
+        System.out.println();
+        CaffeineCacheDemo.execute();
     }
 }
