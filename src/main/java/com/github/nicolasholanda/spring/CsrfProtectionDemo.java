@@ -9,10 +9,9 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.web.bind.annotation.*;
 
 @Configuration
-@EnableWebSecurity
 class CsrfSecurityConfig {
 
-    @Bean
+    @Bean("csrfSecurityFilterChain")
     SecurityFilterChain csrfFilterChain(HttpSecurity http) throws Exception {
         http
             .csrf(csrf -> csrf

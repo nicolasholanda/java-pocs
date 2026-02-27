@@ -30,5 +30,7 @@ public class SpringDemo {
         TransactionManagementDemo.execute();
         System.out.println();
         CsrfProtectionDemo.execute();
+        System.out.println();
+        HttpSecurityDemo.execute();
     }
 }
