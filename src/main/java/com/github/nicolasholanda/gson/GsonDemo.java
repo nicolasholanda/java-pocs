@@ -5,6 +5,9 @@ public class GsonDemo {
     static void main() {
         System.out.println("--- Gson basics ---");
         GsonBasics.execute();
+
+        System.out.println("\n--- Gson collections ---");
+        GsonCollections.execute();
     }
 }
 
