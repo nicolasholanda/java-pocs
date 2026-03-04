@@ -8,6 +8,9 @@ public class GsonDemo {
 
         System.out.println("\n--- Gson collections ---");
         GsonCollections.execute();
+
+        System.out.println("\n--- Gson customization ---");
+        GsonCustomization.execute();
     }
 }
 
