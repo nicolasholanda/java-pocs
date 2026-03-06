@@ -8,5 +8,8 @@ public class QuartzDemo {
 
         System.out.println("\n--- Quartz cron ---");
         QuartzCron.execute();
+
+        System.out.println("\n--- Quartz job data ---");
+        QuartzJobData.execute();
     }
 }
