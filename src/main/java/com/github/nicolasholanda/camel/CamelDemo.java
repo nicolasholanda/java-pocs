@@ -11,5 +11,8 @@ public class CamelDemo {
 
         System.out.println("\n--- Camel transform ---");
         CamelTransform.execute();
+
+        System.out.println("\n--- Camel filter ---");
+        CamelFilter.execute();
     }
 }
