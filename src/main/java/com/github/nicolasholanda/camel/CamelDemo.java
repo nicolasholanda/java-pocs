@@ -17,5 +17,8 @@ public class CamelDemo {
 
         System.out.println("\n--- Camel split aggregate ---");
         CamelSplitAggregate.execute();
+
+        System.out.println("\n--- Camel error handling ---");
+        CamelErrorHandling.execute();
     }
 }
