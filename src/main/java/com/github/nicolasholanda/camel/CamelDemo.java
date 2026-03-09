@@ -8,5 +8,8 @@ public class CamelDemo {
 
         System.out.println("\n--- Camel file route ---");
         CamelFileRoute.execute();
+
+        System.out.println("\n--- Camel transform ---");
+        CamelTransform.execute();
     }
 }
