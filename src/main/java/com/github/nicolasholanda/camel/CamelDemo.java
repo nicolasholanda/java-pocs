@@ -14,5 +14,8 @@ public class CamelDemo {
 
         System.out.println("\n--- Camel filter ---");
         CamelFilter.execute();
+
+        System.out.println("\n--- Camel split aggregate ---");
+        CamelSplitAggregate.execute();
     }
 }
